@@ -1,0 +1,25 @@
+{
+    "name": "eat-dat-burger",
+    "version": "1.0.0",
+    "description": "Create and Eat Dat Burger!",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cenzo-cmd/Eat-Dat-Burger.git"
+    },
+    "author": "Vincent Doria Jr.",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Cenzo-cmd/Eat-Dat-Burger/issues"
+    },
+    "homepage": "https://github.com/Cenzo-cmd/Eat-Dat-Burger#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.1.0",
+        "mysql": "^2.18.1"
+    }
+}
