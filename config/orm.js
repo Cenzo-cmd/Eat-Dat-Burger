@@ -24,6 +24,15 @@ const orm = {
             if (error) throw error;
             cb(result);
         });
+    },
+
+    deleteOne: (condition, cb) => {
+        const queryString = `DELETE FROM burgers WHERE ?`;
+        console.log(queryString);
+        connection.query(queryString, [condition], (error, result) => {
+            if (error) throw error;
+            cb(result);
+        });
     }
 
 

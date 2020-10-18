@@ -1,3 +1,4 @@
+const { request } = require("express");
 const orm = require("../config/orm");
 
 const burger = {
@@ -15,6 +16,12 @@ const burger = {
 
     insertOne(name, cb) {
         orm.insertOne(name, (result) => {
+            cb(result);
+        });
+    },
+
+    deleteOne(condition, cb) {
+        orm.deleteOne(condition, (result) => {
             cb(result);
         });
     }

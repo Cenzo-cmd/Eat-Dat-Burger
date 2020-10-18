@@ -26,5 +26,17 @@ $(function() {
         });
     });
 
+    $('.deleteButton').on('click', function(event) {
+        event.preventDefault();
+        const id = $(this).data('id');
+
+        $.ajax('/api/burgers/' + id, {
+            type: 'DELETE'
+        }).then(function() {
+            console.log('are we herer 2');
+            location.reload();
+        });
+    });
+
 
 });
