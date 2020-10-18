@@ -8,3 +8,23 @@
     margin-right: auto;
     /* width: 50%; */
 }
+
+.lead {
+    text-align: center;
+}
+
+.create-form {
+    display: block;
+    text-align: center;
+}
+
+.card-left {
+    display: inline-block;
+    width: 50%;
+}
+
+.card-right {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}

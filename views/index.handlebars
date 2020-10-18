@@ -1,44 +1,50 @@
 <div class="jumbotron">
     <h1 class="display-4" id="mainTitle">BURGERSSSS!</h1>
     <img class="burgerPicture" src="/assets/img/burger.jpg" width="400" alt="picture of burger" />
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
-        attention to featured content or information.</p>
+    <p class="lead">Go ahead! Make my....burger!</p>
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="ca">Enter Burger Name Here 👉</label>
+            <input type="text" id="burgerText" name="burger">
+        </div>
+
+        <button id="submitButton" type="submit">Add Burger</button>
+    </form>
 </div>
 
 
-<h2>Burgers to be Consumed!</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>{{this.burger_name}}
-        <button class="devourButton" data-id={{this.id}}>Devour</button>
-    </li>
-
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers Consumed</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{this.burger_name}}
-        <button class="deleteButton" data-id={{this.id}}>Dispose</button>
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="burgerText" name="burger">
+<div class="card card-left">
+    <div class="card-header">
+        Burgers to be Consumed!
     </div>
+    <ol>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li>🍔 {{this.burger_name}}
+            <button class="devourButton" data-id={{this.id}}>Devour</button>
+            <br><br>
+        </li>
 
-    <button id="submitButton" type="submit">Add Burger</button>
-</form>
+        {{/unless}}
+        {{/each}}
+    </ol>
+</div>
+
+<div class="card card-right">
+    <div class="card-header">
+        Consumed Burgers!
+    </div>
+    <ol>
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>
+            🍽 {{this.burger_name}}
+            <button class="deleteButton" data-id={{this.id}}>Dispose</button>
+            <br><br>
+        </li>
+        {{/if}}
+        {{/each}}
+    </ol>
+</div>
