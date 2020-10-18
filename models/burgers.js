@@ -10,7 +10,13 @@ const burger = {
     updateOne(condition, cb) {
         orm.updateOne(condition, (result) => {
             cb(result);
-        })
+        });
+    },
+
+    insertOne(name, cb) {
+        orm.insertOne(name, (result) => {
+            cb(result);
+        });
     }
 
 

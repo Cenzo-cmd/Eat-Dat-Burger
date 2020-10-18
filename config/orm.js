@@ -6,7 +6,7 @@ const orm = {
         connection.query(queryString, (error, result) => {
             if (error) throw error;
             cb(result);
-        })
+        });
     },
 
     updateOne: (condition, cb) => {
@@ -15,10 +15,16 @@ const orm = {
         connection.query(queryString, [condition], (error, result) => {
             if (error) throw error;
             cb(result);
-        })
+        });
     },
 
-    insertOne: 'inser one here',
+    insertOne: (name, cb) => {
+        const queryString = `INSERT INTO burgers (burger_name) VALUES ("${name}")`;
+        connection.query(queryString, (error, result) => {
+            if (error) throw error;
+            cb(result);
+        });
+    }
 
 
 };

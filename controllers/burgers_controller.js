@@ -9,20 +9,30 @@ router.get("/", (request, response) => {
         const allBurgerInfo = {
             burgers: data
         };
-        console.log(allBurgerInfo);
+        // console.log(allBurgerInfo);
 
         response.render("index", allBurgerInfo);
 
     });
 });
 
-router.put("/devoured/:id", (request, response) => {
+router.put("/api/burgers/:id", (request, response) => {
     condition = { id: request.params.id };
 
     burgers.updateOne(condition, (result) => {
         response.status(200).end();
     });
+});
 
+router.post("/api/burgers", (request, response) => {
+    console.log('request bodyyyyy', request.body.name);
+    const burgerName = request.body.name;
+
+
+    burgers.insertOne(burgerName, (result) => {
+        console.log("your burger was added!", result);
+        response.status(200).end();
+    })
 })
 
 
