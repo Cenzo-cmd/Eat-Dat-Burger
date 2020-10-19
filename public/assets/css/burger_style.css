@@ -9,6 +9,18 @@
     /* width: 50%; */
 }
 
+.carousel-inner>.item>img {
+    margin: 0 auto;
+}
+
+.pictureCar {
+    width: auto;
+    height: 245px;
+    max-height: 245px;
+    margin: auto;
+    display: block;
+}
+
 .lead {
     text-align: center;
 }
@@ -16,6 +28,21 @@
 .create-form {
     display: block;
     text-align: center;
+}
+
+.deleteButton,
+.devourButton,
+#submitButton:hover {
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.deleteButton:hover,
+.devourButton:hover,
+#submitButton:hover {
+    transform: scale(1.5);
+    transition: .5s;
 }
 
 .card-left {

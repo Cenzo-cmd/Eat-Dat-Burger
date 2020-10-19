@@ -6,14 +6,11 @@ const burgers = require("../models/burgers");
 
 router.get("/", (request, response) => {
     burgers.selectAll((data) => {
-
         const allBurgerInfo = {
             burgers: data
         };
-        // console.log(allBurgerInfo);
 
         response.render("index", allBurgerInfo);
-
     });
 });
 
@@ -21,14 +18,15 @@ router.put("/api/burgers/:id", (request, response) => {
     const condition = { id: request.params.id };
 
     burgers.updateOne(condition, (result) => {
+        if (result.changedRows === 0) {
+            return response.end(404).end();
+        }
         response.status(200).end();
     });
 });
 
 router.post("/api/burgers", (request, response) => {
-    console.log('request bodyyyyy', request.body.name);
     const burgerName = request.body.name;
-
 
     burgers.insertOne(burgerName, (result) => {
         console.log("your burger was added!");
@@ -38,12 +36,12 @@ router.post("/api/burgers", (request, response) => {
 
 router.delete("/api/burgers/:id", (request, response) => {
     const condition = { id: request.params.id };
-    console.log('this is the condition', condition);
-
     burger.deleteOne(condition, (result) => {
+        if (result.affectedRows === 0) {
+            return response.status(404).end();
+        }
         response.status(200).end();
     });
-})
-
+});
 
 module.exports = router;

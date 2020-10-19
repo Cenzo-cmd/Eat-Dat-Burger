@@ -6,7 +6,7 @@ $(function() {
         $.ajax('/api/burgers/' + id, {
             type: "PUT"
         }).then(function() {
-            console.log('Burger has been updated');
+            console.log(`Burger with id ${id} been updated`);
             location.reload();
         });
     });
@@ -15,6 +15,11 @@ $(function() {
         event.preventDefault();
         const burgerName = {
             name: $('#burgerText').val().trim()
+        };
+
+        if (burgerName.name === '') {
+            $('#burgerText').val("");
+            return;
         };
 
         $.ajax('/api/burgers', {
@@ -29,14 +34,11 @@ $(function() {
     $('.deleteButton').on('click', function(event) {
         event.preventDefault();
         const id = $(this).data('id');
-
         $.ajax('/api/burgers/' + id, {
             type: 'DELETE'
         }).then(function() {
-            console.log('are we herer 2');
+            console.log(`Burger with id ${id} deleted!`)
             location.reload();
         });
     });
-
-
 });
