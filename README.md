@@ -4,17 +4,15 @@
 
 
 
-> This app was created to simply manage employees for a company, no matter how large it is.  This app is run through node.js.  Since this is run through node.js, this app cannot be deployed on a url.  Please click on the images to see the functionality.
+> This is a full stack app that creates, edits and deletes burgers and stores all information to a database.  I this case I used JAWS_DB for information to be stored on and deployed the app through [Heroku](https://www.heroku.com/).  When the page app is opened, a GET request is sent and it retrieves all information stored in the JAWS_DB.  When a burger is created, a POST request is sent and the burger name, id and time stamp are stored in the database.  A PUT request is sent when a user clicks on the CONSUME button which updates the CONSUMED boolean from false to true in the database.  And when a user clicks DISPOSE button, a DELETE request is sent and it will delete the burger based on the ID field.  When all of these requests happen, the database is immediately updated and a time stamp is created.
 
 ## Install
 
-
-Please run an npm install to install the files in the package.json file.  When all dependies are installed, simply run node index.js and the command line will allow you to choose from a list of functions to create, edit and modify information for an employee.
+This application is run through Heroku.  Please click [HERE](https://afternoon-coast-80718.herokuapp.com/) to lanch the app or click on the title of this readme file.
 
 ## Usage
 
-This app is used to keep all your employees organized for a company.  You can add, update and delete departments, roles and employee information.  All information will store in a database, there are 2 sql files that will setup and add seed data to your database.
-
+This app is an example of a full stack project.  This utelizes Javascript, HTML, CSS, JAWS_DB, Heroku and Node.js to create this simple user interface. 
 
 
 ## Author
@@ -22,4 +20,5 @@ This app is used to keep all your employees organized for a company.  You can ad
 👤 **Vincent Doria Jr.**
 
 * GitHub: [@Cenzo-cmd](https://github.com/Cenzo-cmd)
+* [Portfolio](https://cenzo-cmd.github.io/Responsive-Portfolio/portfolio.html)
 
