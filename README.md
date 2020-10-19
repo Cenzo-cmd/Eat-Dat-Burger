@@ -22,5 +22,5 @@ This app is an example of a full stack project.  This utelizes Javascript, HTML,
 👤 **Vincent Doria Jr.**
 
 * GitHub: [@Cenzo-cmd](https://github.com/Cenzo-cmd)
-* [Portfolio](https://cenzo-cmd.github.io/Responsive-Portfolio/portfolio.html)
+* [My Portfolio](https://cenzo-cmd.github.io/Responsive-Portfolio/portfolio.html)
 
