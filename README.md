@@ -2,10 +2,11 @@
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-<img src="/public/assets/img/overview1.png" width="400px">
+<img src="/public/assets/img/main.png" width="400px">
 
 
-> This is a full stack app that creates, edits and deletes burgers and stores all information to a database.  I this case I used JAWS_DB for information to be stored on and deployed the app through [Heroku](https://www.heroku.com/).  When the page app is opened, a GET request is sent and it retrieves all information stored in the JAWS_DB.  When a burger is created, a POST request is sent and the burger name, id and time stamp are stored in the database.  A PUT request is sent when a user clicks on the CONSUME button which updates the CONSUMED boolean from false to true in the database.  And when a user clicks DISPOSE button, a DELETE request is sent and it will delete the burger based on the ID field.  When all of these requests happen, the database is immediately updated and a time stamp is created.
+> This is a full stack app that creates, edits and deletes burgers and stores all information to a database.  For this app I used JAWS_DB for information to be stored on and deployed the app through [Heroku](https://www.heroku.com/).  When the page app is opened, a GET request is sent and it retrieves all information stored in the JAWS_DB.  When a burger is created, a POST request is sent and the burger name, id and time stamp are stored in the database.  A PUT request is sent when a user clicks on the 
+<img src="/public/assets/img/Devour.png" width="140px"> button which updates the CONSUMED boolean from false to true in the database.  And when a user clicks <img src="/public/assets/img/Dispose.png" width="140px"> DISPOSE button, a DELETE request is sent and it will delete the burger based on the ID field.  When all of these requests happen, the database is immediately updated and a time stamp is created.
 
 ## Install
 
