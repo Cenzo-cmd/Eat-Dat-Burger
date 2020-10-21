@@ -2,11 +2,27 @@ $(function() {
 
     $('.devourButton').on('click', function() {
         const id = $(this).data('id');
+        const value = { devoured: 'true' };
 
         $.ajax('/api/burgers/' + id, {
-            type: "PUT"
+            type: "PUT",
+            data: value
         }).then(function() {
             console.log(`Burger with id ${id} been updated`);
+            location.reload();
+        });
+    });
+
+    $('.remakeButton').on('click', function(event) {
+        event.preventDefault();
+        const id = $(this).data('id');
+        const value = { devoured: 'false' };
+
+        $.ajax('/api/burgers/' + id, {
+            type: "PUT",
+            data: value
+        }).then(function() {
+            console.log(`Burger with id ${id} has been remade!`);
             location.reload();
         });
     });

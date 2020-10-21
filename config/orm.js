@@ -9,8 +9,8 @@ const orm = {
         });
     },
 
-    updateOne: (condition, cb) => {
-        const queryString = `UPDATE burgers SET devoured = true WHERE ?`;
+    updateOne: (condition, value, cb) => {
+        const queryString = `UPDATE burgers SET devoured = ${value} WHERE ?`;
         connection.query(queryString, [condition], (error, result) => {
             if (error) throw error;
             cb(result);

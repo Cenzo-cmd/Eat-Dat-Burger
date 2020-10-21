@@ -8,8 +8,8 @@ const burger = {
         });
     },
 
-    updateOne(condition, cb) {
-        orm.updateOne(condition, (result) => {
+    updateOne(condition, value, cb) {
+        orm.updateOne(condition, value, (result) => {
             cb(result);
         });
     },

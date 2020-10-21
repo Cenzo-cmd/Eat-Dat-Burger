@@ -32,6 +32,7 @@
 
 .deleteButton,
 .devourButton,
+.remakeButton,
 #submitButton:hover {
     padding: 5px;
     border-radius: 10px;
@@ -40,7 +41,8 @@
 
 .deleteButton:hover,
 .devourButton:hover,
-#submitButton:hover {
+#submitButton:hover,
+.remakeButton:hover {
     transform: scale(1.5);
     transition: .5s;
 }

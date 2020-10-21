@@ -16,10 +16,11 @@ router.get("/", (request, response) => {
 
 router.put("/api/burgers/:id", (request, response) => {
     const condition = { id: request.params.id };
+    const value = request.body.devoured;
 
-    burgers.updateOne(condition, (result) => {
+    burgers.updateOne(condition, value, (result) => {
         if (result.changedRows === 0) {
-            return response.end(404).end();
+            return response.status(404).end();
         }
         response.status(200).end();
     });
